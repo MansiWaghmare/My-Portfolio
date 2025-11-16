@@ -4,13 +4,7 @@ import { cn } from './Utils'
 
 const ContactSection = () => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        setTimeout(()=>{
-
-        },1500)
-    }
+    
   return (
     <>
     <section id='contact' className='py-24 px-4 relative bg-secondary/30'>
@@ -80,7 +74,7 @@ const ContactSection = () => {
 
             <div className='bg-card p-8 rounded-lg shadow-xs'>
                 <h3 className='text-2xl font-semibold mb-6'>Send a message</h3>
-                <form className='space-y-6' onSubmit={handleSubmit} method="POST" action="https://formspree.io/f/mjkjjggn">
+                <form className='space-y-6' method="POST" action="https://formspree.io/f/mjkjjggn" onSubmit={()=>alert("Message sent successfully")}>
                     <div>
                         <label htmlFor='name' className='block text-sm font-medium mb-2'>Your Name</label>
                         <input type='text' id='name' name='name' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlined-hidden focus:ring-2 focus:ring-primary' placeholder='Enter your name'></input>
@@ -88,7 +82,7 @@ const ContactSection = () => {
 
                     <div>
                         <label htmlFor='email' className='block text-sm font-medium mb-2'>Your Email ID</label>
-                        <input type='email' id='name' name='email' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlined-hidden focus:ring-2 focus:ring-primary' placeholder='Enter your email Id'></input>
+                        <input type='email' id='email' name='email' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlined-hidden focus:ring-2 focus:ring-primary' placeholder='Enter your email Id'></input>
                     </div>
 
                     <div>
@@ -96,7 +90,7 @@ const ContactSection = () => {
                         <textarea type='text' id='message' name='message' required className='w-full px-4 py-3 rounded-md border border-input bg-background focus:outlined-hidden focus:ring-2 focus:ring-primary resize-none' placeholder="I'd like to talk about...."></textarea>
                     </div>
 
-                    <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2", )}>
+                    <button type='submit' className={cn("cosmic-button w-full flex items-center justify-center gap-2", )} value="send">
                        Send message <Send size={16}/>
                     </button>
                 </form>
