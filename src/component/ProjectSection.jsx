@@ -26,7 +26,7 @@ const projects = [
         description: "Crafting creative digital experiences with clean design. Welcome to my portfolio — where ideas come to life and journey behind it",
         image: "/portfolio.png",
         tags: ["ReactJS", "Bootstrap", "TailwindCSS", "JavaScript", "Forms API"],
-        demoURL: "mansiwaghmare-portfolio.netlify.app",
+        demoURL: "https://mansiwaghmare-portfolio.netlify.app",
         githubURL: "https://github.com/MansiWaghmare/My-Portfolio"
     }
 ]
